@@ -90,7 +90,7 @@ const Sidebar = () => {
                         ))}
                     </div>
                 </div>
-                <span>&copy; {new Date().getFullYear()} INSTAGRAM FROM META</span>
+                <span>&copy; {new Date().getFullYear()} Social Tree</span>
             </div>
 
         </div>

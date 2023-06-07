@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { clearErrors, loadUser, updateProfile } from '../../../actions/userAction';
-import profile from '../../../assests/images/hero.png';
 import { UPDATE_PROFILE_RESET } from '../../../constants/userConstants';
 import { BASE_PROFILE_IMAGE_URL } from '../../../utils/constants';
 import MetaData from '../../Layouts/MetaData';
@@ -83,7 +82,7 @@ const UpdateProfile = () => {
 
     return (
         <>
-            <MetaData title="Edit Profile • Instagram" />
+            <MetaData title="Edit Profile • Social tree" />
 
             <form
                 onSubmit={handleUpdate}
