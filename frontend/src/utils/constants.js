@@ -1,7 +1,7 @@
-export const BASE_PROFILE_IMAGE_URL='http://localhost:4000/public/uploads/profiles/';
-export const BASE_POST_IMAGE_URL='http://localhost:4000/public/uploads/posts/';
+export const BASE_PROFILE_IMAGE_URL='https://social-tree-backend.onrender.com/public/uploads/profiles/';
+export const BASE_POST_IMAGE_URL='https://social-tree-backend.onrender.com/public/uploads/posts/';
 
-export const SOCKET_ENDPOINT = "http://localhost:4000";
+export const SOCKET_ENDPOINT = "https://social-tree-backend.onrender.com/";
 
 // export const BASE_PROFILE_IMAGE_URL = 'https://socialtreemern.herokuapp.com/public/uploads/profiles/';
 // export const BASE_POST_IMAGE_URL = 'https://socialtreemern.herokuapp.com/public/uploads/posts/';
