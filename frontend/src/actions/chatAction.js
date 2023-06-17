@@ -1,5 +1,6 @@
 import axios from "axios";
 import { ALL_CHATS_FAIL, ALL_CHATS_REQUEST, ALL_CHATS_SUCCESS, CLEAR_ERRORS, NEW_CHAT_FAIL, NEW_CHAT_REQUEST, NEW_CHAT_SUCCESS } from "../constants/chatConstants";
+import { SOCKET_ENDPOINT } from "../utils/constants";
 
 // Get All Chats
 export const getAllChats = () => async (dispatch) => {
@@ -7,7 +8,7 @@ export const getAllChats = () => async (dispatch) => {
 
         dispatch({ type: ALL_CHATS_REQUEST });
 
-        const { data } = await axios.get('/api/v1/chats');
+        const { data } = await axios.get(`${SOCKET_ENDPOINT}/api/v1/chats`);
 
         dispatch({
             type: ALL_CHATS_SUCCESS,
@@ -28,7 +29,7 @@ export const addNewChat = (userId) => async (dispatch) => {
 
         dispatch({ type: NEW_CHAT_REQUEST });
         const config = { header: { "Content-Type": "application/json" } }
-        const { data } = await axios.post("/api/v1/newChat", { receiverId: userId }, config);
+        const { data } = await axios.post(`${SOCKET_ENDPOINT}/api/v1/newChat`, { receiverId: userId }, config);
 
         dispatch({
             type: NEW_CHAT_SUCCESS,
