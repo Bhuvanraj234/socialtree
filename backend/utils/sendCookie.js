@@ -5,10 +5,8 @@ const sendCookie = (user = {}, statusCode, res) => {
         expires: new Date(
             Date.now() + 5 * 24 * 60 * 60 * 1000
         ),
-        secure: false,
-        httpOnly: false,
         sameSite: "none",
-        domain: "netlify.app"
+        domain: "https://sensational-liger-dac015.netlify.app"
     }
 
     res.status(statusCode).cookie('token', token, options).json({
