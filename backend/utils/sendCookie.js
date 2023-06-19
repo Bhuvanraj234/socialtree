@@ -8,7 +8,7 @@ const sendCookie = (user = {}, statusCode, res) => {
         secure: false,
         httpOnly: false,
         sameSite: "none",
-        domain: "sensational-liger-dac015.netlify.app"
+        domain: "netlify.app"
     }
 
     res.status(statusCode).cookie('token', token, options).json({
